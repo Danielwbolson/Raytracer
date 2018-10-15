@@ -1,0 +1,5 @@
+﻿  Sphere.cpp
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Assignment2.vcxproj -> D:\Daniel Olson\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Debug\Assignment2.exe
