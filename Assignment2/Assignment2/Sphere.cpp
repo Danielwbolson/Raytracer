@@ -20,7 +20,7 @@ bool Sphere::IsAnIntersection(Ray* r, Intersection* i) {
     float a = 1;
     float b = (2 * dir).Dot(fromSurface);
     float c = (fromSurface).Dot(fromSurface) - (radius * radius);
-    
+
     float radical = b * b - 4 * a * c;
     if (radical < 0)
         return false;
@@ -30,9 +30,15 @@ bool Sphere::IsAnIntersection(Ray* r, Intersection* i) {
     float t2 = (-b - sqrt_rad) / (2 * a);
 
     float chosen_t = fmin(t1, t2);
+    if (chosen_t < 0) {
+        chosen_t = fmax(t1, t2);
+        if (chosen_t < 0) {
+            return false;
+        }
+    }
 
     if (i) {
-        i->point = r->point + chosen_t * dir;
+        i->point = r->point + chosen_t * r->direction;
         i->material = material;
         i->normal = (i->point - position).Normalize();
     }

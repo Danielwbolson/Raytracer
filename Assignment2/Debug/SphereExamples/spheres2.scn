@@ -1,6 +1,6 @@
 #Simple Sphere Sceen
 camera 0 2 -10 0 -.1 .9 0 1 0 26
-output_image ambient.bmp
+output_image spheres2.bmp
 
 #"ground" sphere
 material .75 .75 .75 .75 .75 .75 .3 .3 .3 32 .2 .2 .2 1.5
@@ -55,10 +55,10 @@ material .1 .2 .1 .35 .7 .35 .3 .3 .3 16 .35 .7 .35 1
 sphere -3 1 -4 1
 
 #white overhead light
-#point_light 10 10 10 0 5 0
-#point_light 50 50 50 10 5 -5
+point_light 10 10 10 0 5 0
+point_light 50 50 50 10 5 -5
 ambient_light .35 .35 .35
-#directional_light 1 1 1 .5 -.5 .5
+directional_light 1 1 1 .5 -.5 .5
 background .05 .05 .05
 
 max_depth 2
