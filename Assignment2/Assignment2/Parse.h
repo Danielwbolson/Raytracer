@@ -71,7 +71,11 @@ static Scene* Parse(std::string fileName) {
             //    "  HalfHeight Angle: %f\n",
             //    px, py, pz, dx, dy, dz, ux, uy, uz, ha);
             
-            Camera* cam = new Camera(Vector(px, py, pz), Vector(dx, dy, dz).Normalize(), Vector(ux, uy, uz).Normalize(), ha);
+            Vector right = Vector(ux, uy, uz).Cross(Vector(dx, dy, dz)).Normalize();
+            Vector up = Vector(dx, dy, dz).Cross(Vector(right.x, right.y, right.z)).Normalize();
+
+
+            Camera* cam = new Camera(Vector(px, py, pz), Vector(dx, dy, dz).Normalize(), up, ha);
 
             scene->camera = cam;
         }

@@ -54,7 +54,7 @@ sphere 3 1 -4 .6
 material .1 .2 .1 .35 .7 .35 .3 .3 .3 16 .35 .7 .35 1
 sphere -3 1 -4 1
 
-#white overhad light
+#white overhead light
 #point_light 10 10 10 0 5 0
 #point_light 50 50 50 10 5 -5
 ambient_light .35 .35 .35

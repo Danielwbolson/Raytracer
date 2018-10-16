@@ -8,15 +8,18 @@ Sphere::Sphere(Vector v, float r) {
 
 bool Sphere::IsAnIntersection(Ray* r, Intersection* i) {
 
-    // Initial check
-    Vector L = position - r->point;
-    if (L.Dot(r->direction) < 0)
+    Vector toSurf = position - r->point;
+    Vector dir = r->direction;
+
+    // Initial check if surface is behind ray
+    if (toSurf.Dot(dir) < 0)
         return false;
 
     // We have a chance of colliding
+    Vector fromSurface = -toSurf;
     float a = 1;
-    float b = (2 * r->direction).Dot(r->point - position);
-    float c = (r->point - position).Dot(r->point - position) - (radius * radius);
+    float b = (2 * dir).Dot(fromSurface);
+    float c = (fromSurface).Dot(fromSurface) - (radius * radius);
     
     float radical = b * b - 4 * a * c;
     if (radical < 0)
@@ -27,15 +30,9 @@ bool Sphere::IsAnIntersection(Ray* r, Intersection* i) {
     float t2 = (-b - sqrt_rad) / (2 * a);
 
     float chosen_t = fmin(t1, t2);
-    if (chosen_t < 0) {
-        chosen_t = fmax(t1, t2);
-        if (chosen_t < 0) {
-            return false;
-        }
-    }
 
     if (i) {
-        i->point = r->point + chosen_t * r->direction;
+        i->point = r->point + chosen_t * dir;
         i->material = material;
         i->normal = (i->point - position).Normalize();
     }
