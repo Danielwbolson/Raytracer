@@ -14,7 +14,6 @@ Vector DirectionalLight::LightShading(Intersection* i, Scene* s) {
     if (Intersect(i, s))
         return Vector(0, 0, 0);
 
-
     Camera* c = s->camera;
 
     Vector view = (c->Position() - i->point).Normalize();

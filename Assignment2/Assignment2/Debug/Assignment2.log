@@ -1,24 +1,5 @@
-﻿  AmbientLight.cpp
-  DirectionalLight.cpp
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\directionallight.cpp(33): warning C4018: '<': signed/unsigned mismatch
-  main.cpp
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(85): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(88): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(118): warning C4018: '<': signed/unsigned mismatch
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(122): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\main.cpp(141): warning C4018: '<': signed/unsigned mismatch
-  PointLight.cpp
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\pointlight.cpp(23): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\pointlight.cpp(31): warning C4018: '<': signed/unsigned mismatch
-  Ray.cpp
-  Sphere.cpp
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\sphere.cpp(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  SpotLight.cpp
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\spotlight.cpp(21): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\spotlight.cpp(28): warning C4715: 'SpotLight::Intersect': not all control paths return a value
+﻿  Vector.cpp
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\vector.cpp(90): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\vector.cpp(94): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\assignment2\vector.cpp(97): warning C4305: '*=': truncation from 'double' to 'float'
   Assignment2.vcxproj -> D:\Daniel Olson\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Debug\Assignment2.exe

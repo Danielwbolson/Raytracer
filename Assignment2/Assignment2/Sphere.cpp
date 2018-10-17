@@ -6,6 +6,8 @@ Sphere::Sphere(Vector v, float r) {
     this->radius = r;
 }
 
+// TODO : seperate for light and rays
+// const references if we have no intention of editing data
 bool Sphere::IsAnIntersection(Ray* r, Intersection* i) {
 
     Vector toSurf = position - r->point;

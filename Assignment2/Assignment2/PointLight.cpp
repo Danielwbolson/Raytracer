@@ -29,7 +29,9 @@ Vector PointLight::LightShading(Intersection* i, Scene* s) {
 
 bool PointLight::Intersect(Intersection* inter, Scene* s) {
     for (int i = 0; i < s->surfaces.size(); i++) {
-        Ray r = Ray(inter->point + inter->normal * 0.0001f, (this->Position() - inter->point).Normalize());
+        Vector p = inter->point + inter->normal * 0.0001f;
+        Vector dir = (this->Position() - inter->point).Normalize();
+        Ray r = Ray(p, dir);
 
         if (s->surfaces[i]->IsAnIntersection(&r)) {
             return true;

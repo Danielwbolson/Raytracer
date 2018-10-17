@@ -25,4 +25,5 @@ bool SpotLight::Intersect(Intersection* inter, Scene* s) {
             return true;
         }
     }
+    return false;
 }

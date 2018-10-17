@@ -100,7 +100,8 @@ float Vector::AngleBetween(const Vector& v, bool degrees) const {
 }
 
 Vector Vector::Normalize() const {
-    return Vector(x / Length(), y / Length(), z / Length());
+    float l = Length();
+    return Vector(x / l, y / l, z / l);
 }
 
 Vector Vector::Reflection(const Vector& n) const {
@@ -108,5 +109,8 @@ Vector Vector::Reflection(const Vector& n) const {
 }
 
 double Vector::Distance(const Vector& v) const {
-    return sqrt(pow(x - v.x, 2) + pow(y - v.y, 2) + pow(z - v.z, 2));
+    float dx = x - v.x;
+    float dy = y - v.y;
+    float dz = z - v.z;
+    return sqrt(dx*dx + dy*dy + dz*dz);
 }
