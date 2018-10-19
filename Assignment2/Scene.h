@@ -7,8 +7,9 @@
 #include "Material.h"
 #include "Light.h"
 #include "Vector.h"
-#include <string>
+#include "Triangle.h"
 
+#include <string>
 #include <vector>
 
 class Light;
@@ -25,9 +26,14 @@ public:
     Vector background;
     std::string image_path;
 
+    int max_vertices;
+    int max_normals;
+    Vector* vertices;
+    Vector* normals;
+
     Scene() : width(640), height(480), max_depth(5), 
         camera{ Camera(Vector(0, 0, 0), Vector(0, 0, 1), Vector(0, 1, 0), 45) }, 
-        background{ Vector(0, 0, 0) }{
+        background{ Vector(0, 0, 0) }, vertices(nullptr), normals(nullptr) {
 
     }
 

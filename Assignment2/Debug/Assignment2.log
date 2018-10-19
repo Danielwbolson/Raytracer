@@ -1,9 +1,9 @@
 ﻿  main.cpp
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(79): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(82): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(85): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(111): warning C4018: '<': signed/unsigned mismatch
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(114): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(133): warning C4018: '<': signed/unsigned mismatch
-  Assignment2.vcxproj -> C:\Users\Daniel\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Debug\Assignment2.exe
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(79): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(82): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(85): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(111): warning C4018: '<': signed/unsigned mismatch
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(114): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(133): warning C4018: '<': signed/unsigned mismatch
+  Assignment2.vcxproj -> D:\Daniel Olson\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Debug\Assignment2.exe

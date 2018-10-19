@@ -83,6 +83,14 @@ static Scene Parse(Scene& scene, std::string fileName) {
             scene.width = width;
             scene.height = height;
         }
+
+
+        /*
+         * TODO:
+         *  max_verts, max_norms, Vertices, Normals, Triangles, tri_normals,
+         */
+
+
         else if (strcmp(command, "sphere") == 0) { // If the command is a sphere command
             float x, y, z, r;
             sscanf(line, "sphere %f %f %f %f", &x, &y, &z, &r);

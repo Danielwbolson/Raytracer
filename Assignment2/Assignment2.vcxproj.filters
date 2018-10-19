@@ -31,21 +31,12 @@
     <Filter Include="Source Files\Image">
       <UniqueIdentifier>{f696b597-221d-464c-aa35-c59905c64707}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\DataStructures">
+    <Filter Include="Header Files\Ray">
       <UniqueIdentifier>{caa20f6c-1886-4d46-9adc-343f8f0dac37}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Vector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DirectionalLight.cpp">
@@ -60,9 +51,6 @@
     <ClCompile Include="AmbientLight.cpp">
       <Filter>Source Files\Lights</Filter>
     </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Sphere.cpp">
       <Filter>Source Files\Surfaces</Filter>
     </ClCompile>
@@ -72,18 +60,24 @@
     <ClCompile Include="image.cpp">
       <Filter>Source Files\Image</Filter>
     </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\Surfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\Surfaces</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Material.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Parse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DirectionalLight.h">
@@ -120,13 +114,25 @@
       <Filter>Header Files\Image</Filter>
     </ClInclude>
     <ClInclude Include="Intersection.h">
-      <Filter>Header Files\DataStructures</Filter>
+      <Filter>Header Files\Ray</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files\DataStructures</Filter>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files\Surfaces</Filter>
     </ClInclude>
     <ClInclude Include="Ray.h">
+      <Filter>Header Files\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Header Files\Surfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
