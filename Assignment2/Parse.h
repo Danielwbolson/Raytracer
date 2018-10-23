@@ -16,6 +16,8 @@
 #include "SpotLight.h"
 #include "PointLight.h"
 #include "AmbientLight.h"
+#include "Triangle.h"
+#include "NormalTriangle.h"
 
 #include "Vector.h"
 
@@ -37,6 +39,8 @@ static Scene Parse(Scene& scene, std::string fileName) {
     length = ftell(fp);  // return the value of the current position
     //fprintf(stderr, "File '%s' is %ld bytes long.\n\n", fileName.c_str(), length);
     fseek(fp, 0, SEEK_SET);  // move position indicator to the start of the file
+
+    Material currMaterial;
 
     //Loop through reading each line
     while (fgets(line, 1024, fp)) { //Assumes no line is longer than 1024 characters!
@@ -83,20 +87,85 @@ static Scene Parse(Scene& scene, std::string fileName) {
             scene.width = width;
             scene.height = height;
         }
+        else if (strcmp(command, "output_image") == 0) { // If the command is an output_image command
+            char outFile[1024];
+            sscanf(line, "output_image %s", outFile);
+            //fprintf(stderr, "Render to file named: %s\n", outFile);
 
+            scene.image_path = outFile;
+        }
+        else if (strcmp(command, "max_vertices") == 0) { // If the command is the number of max vertices
+            int n;
+            sscanf(line, "max_vertices %d", &n);
 
-        /*
-         * TODO:
-         *  max_verts, max_norms, Vertices, Normals, Triangles, tri_normals,
-         */
+            scene.max_vertices = n;
+            scene.vertices.reserve(n);
+        }
+        else if (strcmp(command, "max_normals") == 0) { // IF the command is the number of max normals
+            int n;
+            sscanf(line, "max_normals %d", &n);
 
+            scene.max_normals = n;
+            scene.normals.reserve(n);
+        }
+        else if (strcmp(command, "vertex") == 0) { // if the command is a vertex
+            float x, y, z;
 
+            sscanf(line, "vertex %f %f %f", &x, &y, &z);
+
+            //fprintf(stderr, "capacity: %d, max_verts: %d\n", scene.vertices.capacity(), scene.max_vertices);
+            if (scene.vertices.capacity() == scene.max_vertices)
+                scene.vertices.push_back(Vector(x, y, z));
+            else {
+                fprintf(stderr, "max_vertices not specified\n");
+                exit(-1);
+            }
+        }
+        else if (strcmp(command, "normal") == 0) { // If the command is a normal
+            float x, y, z;
+
+            sscanf(line, "normal %f %f %f", &x, &y, &z);
+
+            if (scene.normals.capacity() == scene.max_normals)
+                scene.normals.push_back(Vector(x, y, z).Normalize());
+            else {
+                fprintf(stderr, "max_normals not specified\n");
+                exit(-1);
+            }
+        }
+        else if (strcmp(command, "triangle") == 0) { // If the command is a triangle
+            int a, b, c;
+
+            sscanf(line, "triangle %d %d %d", &a, &b, &c);
+
+            Triangle* t = new Triangle(scene.vertices[a], scene.vertices[b], scene.vertices[c]);
+            t->material = currMaterial;
+            t->CalculateNormal(scene.camera.Direction());
+
+            scene.surfaces.push_back(t);
+        }
+        else if (strcmp(command, "normal_triangle") == 0) { // If a command is a triangle with a normals for each vertex
+            int v1, v2, v3, n1, n2, n3;
+
+            sscanf(line, "normal_triangle %d %d %d %d %d %d",
+                &v1, &v2, &v3, &n1, &n2, &n3);
+
+            NormalTriangle* t = new NormalTriangle(scene.vertices[v1], scene.vertices[v2], scene.vertices[v3],
+                scene.normals[n1], scene.normals[n2], scene.normals[n3]);
+            t->material = currMaterial;
+            t->CalculateNormal(scene.camera.Direction());
+
+            scene.surfaces.push_back(t);
+        }
         else if (strcmp(command, "sphere") == 0) { // If the command is a sphere command
             float x, y, z, r;
             sscanf(line, "sphere %f %f %f %f", &x, &y, &z, &r);
             //fprintf(stderr, "Sphere at position (%f,%f,%f) with radius %f\n", x, y, z, r);
 
-            scene.surfaces.push_back(new Sphere(Vector(x, y, z), r));
+            Sphere* s = new Sphere(Vector(x, y, z), r);
+            s->material = currMaterial;
+
+            scene.surfaces.push_back(s);
         }
         else if (strcmp(command, "background") == 0) { // If the command is a background command
             float r, g, b;
@@ -104,13 +173,6 @@ static Scene Parse(Scene& scene, std::string fileName) {
             //fprintf(stderr, "Background color of (%f,%f,%f)\n", r, g, b);
 
             scene.background = Vector(r, g, b);
-        }
-        else if (strcmp(command, "output_image") == 0) { // If the command is an output_image command
-            char outFile[1024];
-            sscanf(line, "output_image %s", outFile);
-            //fprintf(stderr, "Render to file named: %s\n", outFile);
-
-            scene.image_path = outFile;
         }
         else if (strcmp(command, "material") == 0) { // If the command is a material
             float ar, ag, ab; // ambient coefficients
@@ -128,7 +190,8 @@ static Scene Parse(Scene& scene, std::string fileName) {
             //    "  Transmissive coefficients: %f, %f, %f, %f\n",
             //    ar, ab, ag, dr, dg, db, sr, sg, sb, ns, tr, tg, tb, ior);
 
-            scene.materials.push_back(Material(Vector(ar, ag, ab), Vector(dr, dg, db), Vector(sr, sg, sb), ns, Vector(tr, tg, tb), ior));
+            currMaterial = Material(Vector(ar, ag, ab), Vector(dr, dg, db), Vector(sr, sg, sb), ns, Vector(tr, tg, tb), ior);
+            scene.materials.push_back(currMaterial);
         }
         else if (strcmp(command, "directional_light") == 0) { // If the command is a directional light
             float r, g, b, dx, dy, dz;

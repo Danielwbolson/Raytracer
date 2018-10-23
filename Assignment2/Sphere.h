@@ -14,7 +14,6 @@ private:
 
 public:
     Sphere(Vector, float);
-
     float Radius() const { return radius; }
 
     bool IsAnIntersection(const Ray&, Intersection&) const override;

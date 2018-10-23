@@ -28,12 +28,12 @@ public:
 
     int max_vertices;
     int max_normals;
-    Vector* vertices;
-    Vector* normals;
+    std::vector<Vector> vertices;
+    std::vector<Vector> normals;
 
     Scene() : width(640), height(480), max_depth(5), 
         camera{ Camera(Vector(0, 0, 0), Vector(0, 0, 1), Vector(0, 1, 0), 45) }, 
-        background{ Vector(0, 0, 0) }, vertices(nullptr), normals(nullptr) {
+        background{ Vector(0, 0, 0) } {
 
     }
 
@@ -46,6 +46,12 @@ public:
 
         lights.clear();
         lights.empty();
+
+        vertices.clear();
+        vertices.empty();
+
+        normals.clear();
+        normals.empty();
     }
 };
 

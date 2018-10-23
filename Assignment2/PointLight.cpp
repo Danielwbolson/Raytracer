@@ -24,7 +24,7 @@ Vector PointLight::LightShading(const Intersection& i, const Scene& s) const {
     Vector diffuse = i.material.Diffuse() * (i.normal.Dot(light));
     Vector specular = i.material.Specular() * (float)pow(view.Dot(reflect), i.material.Exponent());
 
-    return intensity * (diffuse + specular) * 255;
+    return intensity * (diffuse + specular);
 }
 
 bool PointLight::Intersect(const Intersection& inter, const Scene& s) const {

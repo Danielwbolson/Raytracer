@@ -163,6 +163,7 @@
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Material.cpp" />
+    <ClCompile Include="NormalTriangle.cpp" />
     <ClCompile Include="pixel.cpp" />
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="Intersection.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />
+    <ClInclude Include="NormalTriangle.h" />
     <ClInclude Include="Parse.h" />
     <ClInclude Include="pixel.h" />
     <ClInclude Include="PointLight.h" />

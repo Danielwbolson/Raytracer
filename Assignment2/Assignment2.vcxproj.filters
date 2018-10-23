@@ -75,6 +75,9 @@
     <ClCompile Include="Triangle.cpp">
       <Filter>Source Files\Surfaces</Filter>
     </ClCompile>
+    <ClCompile Include="NormalTriangle.cpp">
+      <Filter>Source Files\Surfaces</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parse.h">
@@ -132,6 +135,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
+      <Filter>Header Files\Surfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTriangle.h">
       <Filter>Header Files\Surfaces</Filter>
     </ClInclude>
   </ItemGroup>

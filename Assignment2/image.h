@@ -22,12 +22,6 @@
 /**
  * constants
  **/
-enum {
-    IMAGE_SAMPLING_POINT,
-    IMAGE_SAMPLING_BILINEAR,
-    IMAGE_SAMPLING_GAUSSIAN,
-    IMAGE_N_SAMPLING_METHODS
-};
 
 enum {
     IMAGE_CHANNEL_RED,
@@ -87,14 +81,8 @@ public:
 
     void CopyPixels(Image* img);
 
-    // Sets the sampling method.
-    void SetSamplingMethod(int method);
-
-    // Sample image using current sampling method.
-    Pixel Sample(double u, double v);
-
     // Distance between two points
-    double Distance(double x, double y, double x1, double x2_);
+    double Distance(const double x, const double y, const double x1, const double x2_) const;
 };
 
 #endif

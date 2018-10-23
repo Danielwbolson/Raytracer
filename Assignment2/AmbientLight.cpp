@@ -10,5 +10,5 @@ AmbientLight::AmbientLight(Vector c) {
 }
 
 Vector AmbientLight::LightShading(const Intersection& i, const Scene& s) const {
-    return color * i.material.Ambient() * 255;
+    return color * i.material.Ambient();
 }

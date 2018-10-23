@@ -1,22 +1,11 @@
-﻿  AmbientLight.cpp
-  DirectionalLight.cpp
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\directionallight.cpp(32): warning C4018: '<': signed/unsigned mismatch
-  PointLight.cpp
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\pointlight.cpp(23): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\pointlight.cpp(31): warning C4018: '<': signed/unsigned mismatch
-  SpotLight.cpp
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\spotlight.cpp(21): warning C4018: '<': signed/unsigned mismatch
-  main.cpp
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(40): warning C4018: '<': signed/unsigned mismatch
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(79): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(82): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(85): warning C4244: 'argument': conversion from 'float' to 'Component', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(111): warning C4018: '<': signed/unsigned mismatch
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(114): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\daniel\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(133): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(96): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(138): warning C4018: '<': signed/unsigned mismatch
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(142): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(161): warning C4018: '<': signed/unsigned mismatch
   Generating code
-  28 of 483 functions ( 5.8%) were compiled, the rest were copied from previous compilation.
-    13 functions were new in current compilation
-    16 functions had inline decision re-evaluated but remain unchanged
+  5 of 592 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Assignment2.vcxproj -> C:\Users\Daniel\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Release\Assignment2.exe
+  Assignment2.vcxproj -> D:\Daniel Olson\Desktop\Fall2018\CSCI5607\Assignment2\Assignment2\Release\Assignment2.exe
