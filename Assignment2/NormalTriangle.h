@@ -9,8 +9,7 @@ class NormalTriangle : public Surface {
 private:
     Vector* vertices;
     Vector* normals;
-    Vector normalFront;
-    Vector normalBack;
+    Vector normal;
 
 public:
     NormalTriangle();
@@ -18,8 +17,7 @@ public:
 
     Vector* Vertices() const { return vertices; }
     Vector* Normals() const { return normals; }
-    Vector NormalFront() const { return normalFront; }
-    Vector NormalBack() const { return normalBack; }
+    Vector Normal() const { return normal; }
 
     bool IsAnIntersection(const Ray&, Intersection&) const;
     bool Shadow(const Ray&) const;

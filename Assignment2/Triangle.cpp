@@ -13,7 +13,7 @@ Triangle::Triangle(const Vector v1, const Vector v2, Vector v3) {
  * https://gamedev.stackexchange.com/questions/23743/whats-the-most-efficient-way-to-find-barycentric-coordinates
  */
 bool Triangle::IsAnIntersection(const Ray& r, Intersection& i) const {
-    float t = (position - r.point).Dot(normalFront) / (r.direction.Dot(normalFront));
+    float t = (position - r.point).Dot(normal) / (r.direction.Dot(normal));
 
     // t == 0 will never happen with floating point numbers
 
@@ -44,7 +44,7 @@ bool Triangle::IsAnIntersection(const Ray& r, Intersection& i) const {
 
     i.point = r.point + t * r.direction;
     i.material = material;
-    i.normal = normalFront;
+    i.normal = normal;
 
     return true;
 }
@@ -55,7 +55,7 @@ bool Triangle::IsAnIntersection(const Ray& r, Intersection& i) const {
 bool Triangle::Shadow(const Ray& r) const {
 
     // plane intersection
-    float t = (vertices[0] - r.point).Dot(normalFront) / (r.direction.Dot(normalFront));
+    float t = (vertices[0] - r.point).Dot(normal) / (r.direction.Dot(normal));
 
     if (t < 0) return false;
 
@@ -88,12 +88,8 @@ void Triangle::CalculateNormal(const Vector& c) {
     Vector cross = (vertices[0] - vertices[1]).Cross(vertices[2] - vertices[1]);
     Vector c_n = cross.Normalize();
 
-    if (cross.Dot(c) < 0) {
-        normalFront = c_n;
-        normalBack = -c_n;
-    }
-    else {
-        normalFront = -c_n;
-        normalBack = c_n;
-    }
+    if (cross.Dot(c) < 0)
+        normal = c_n;
+    else
+        normal = -c_n;
 }

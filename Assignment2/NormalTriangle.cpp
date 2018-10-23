@@ -16,7 +16,7 @@ NormalTriangle::NormalTriangle(const Vector v1, const Vector v2, const Vector v3
  */
 bool NormalTriangle::IsAnIntersection(const Ray& r, Intersection& i) const {
     // plane intersection
-    float t = (vertices[0] - r.point).Dot(normalFront) / (r.direction.Dot(normalFront));
+    float t = (vertices[0] - r.point).Dot(normal) / (r.direction.Dot(normal));
 
     // behind us
     if (t < 0) return false;
@@ -59,8 +59,8 @@ bool NormalTriangle::IsAnIntersection(const Ray& r, Intersection& i) const {
  * https://gamedev.stackexchange.com/questions/23743/whats-the-most-efficient-way-to-find-barycentric-coordinates
  */
 bool NormalTriangle::Shadow(const Ray& r) const {
-    float d = -position.Dot(normalFront);
-    float t = -(r.point.Dot(normalFront) + d) / (r.direction.Dot(normalFront));
+    float d = -position.Dot(normal);
+    float t = -(r.point.Dot(normal) + d) / (r.direction.Dot(normal));
 
     if (t < 0) return false;
 
@@ -92,12 +92,8 @@ void NormalTriangle::CalculateNormal(const Vector& c) {
     Vector cross = (vertices[0] - vertices[1]).Cross(vertices[2] - vertices[1]);
     Vector c_n = cross.Normalize();
 
-    if (cross.Dot(c) < 0) {
-        normalFront = c_n;
-        normalBack = -c_n;
-    }
-    else {
-        normalFront = -c_n;
-        normalBack = c_n;
-    }
+    if (cross.Dot(c) < 0) 
+        normal = c_n;
+    else 
+        normal = -c_n;
 }

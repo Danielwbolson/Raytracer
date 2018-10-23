@@ -12,14 +12,12 @@
 class Scene;
 
 class Light {
-
 protected:
     Vector color;
 
 public:
     virtual Vector LightShading(const Intersection&, const Scene&) const = 0;
     virtual bool Intersect(const Intersection&, const Scene&) const = 0;
-
 };
 
 #endif

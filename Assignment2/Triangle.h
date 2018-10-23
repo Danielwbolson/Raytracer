@@ -7,16 +7,14 @@
 class Triangle : public Surface {
 private:
     Vector* vertices;
-    Vector normalFront;
-    Vector normalBack;
+    Vector normal;
 
 public:
     Triangle();
     Triangle(const Vector, const Vector, const Vector); // regular triangle
 
     Vector* Vertices() const { return vertices; }
-    Vector NormalFront() const { return normalFront; }
-    Vector NormalBack() const { return normalBack; }
+    Vector Normal() const { return normal; }
 
     bool IsAnIntersection(const Ray&, Intersection&) const;
     bool Shadow(const Ray&) const;
