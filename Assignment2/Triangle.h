@@ -2,6 +2,7 @@
 #ifndef TRIANGLE_H_
 #define TRIANGLE_H_
 
+#include <stdio.h>
 #include "Surface.h"
 
 class Triangle : public Surface {
@@ -17,7 +18,7 @@ public:
     Vector Normal() const { return normal; }
 
     bool IsAnIntersection(const Ray&, Intersection&) const;
-    bool Shadow(const Ray&) const;
+    bool Shadow(const Ray&, const float) const;
     void CalculateNormal(const Vector&);
 
 };

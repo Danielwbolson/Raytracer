@@ -17,7 +17,7 @@ public:
     float Radius() const { return radius; }
 
     bool IsAnIntersection(const Ray&, Intersection&) const override;
-    bool Shadow(const Ray&) const override;
+    bool Shadow(const Ray&, const float) const override;
 };
 
 #endif

@@ -18,7 +18,7 @@ public:
 
     Vector Position() const { return position; }
     virtual bool IsAnIntersection(const Ray&, Intersection&) const = 0;
-    virtual bool Shadow(const Ray&) const = 0;
+    virtual bool Shadow(const Ray&, const float) const = 0;
 };
 
 #endif

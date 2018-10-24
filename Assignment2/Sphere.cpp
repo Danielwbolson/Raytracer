@@ -36,6 +36,7 @@ bool Sphere::IsAnIntersection(const Ray& r, Intersection& i) const {
             return false;
         }
     }
+
     i.point = r.point + chosen_t * r.direction;
     i.material = material;
     i.normal = (i.point - position).Normalize();
@@ -43,7 +44,7 @@ bool Sphere::IsAnIntersection(const Ray& r, Intersection& i) const {
     return true;
 }
 
-bool Sphere::Shadow(const Ray& r) const {
+bool Sphere::Shadow(const Ray& r, const float dist) const {
     Vector toSurf = position - r.point;
     Vector dir = r.direction;
 
@@ -72,6 +73,8 @@ bool Sphere::Shadow(const Ray& r) const {
             return false;
         }
     }
+
+    if (chosen_t > dist) return false;
 
     return true;
 }

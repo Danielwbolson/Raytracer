@@ -21,7 +21,9 @@ bool SpotLight::Intersect(const Intersection& inter, const Scene& s) const {
     for (int i = 0; i < s.surfaces.size(); i++) {
         Ray r = Ray(inter.point + inter.normal * 0.0001f, (s.surfaces[i]->Position() - inter.point).Normalize());
 
-        if (s.surfaces[i]->Shadow(r)) {
+        float dist = (position - inter.point).Length();
+
+        if (s.surfaces[i]->Shadow(r, dist)) {
             return true;
         }
     }

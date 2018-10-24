@@ -17,23 +17,26 @@ Vector PointLight::LightShading(const Intersection& i, const Scene& s) const {
     Vector view = (s.camera.Position() - i.point).Normalize();
     Vector light = (position - i.point).Normalize();
 
+    if (i.normal.Dot(light) < 0) return Vector(0, 0, 0);
+
     Vector reflect = light.Reflection(i.normal);
     double dist = i.point.Distance(position);
 
-    Vector intensity = color / pow(dist, 2);
-    Vector diffuse = i.material.Diffuse() * (i.normal.Dot(light));
-    Vector specular = i.material.Specular() * (float)pow(view.Dot(reflect), i.material.Exponent());
+    Vector intensity = color / (dist * dist);
+    Vector diffuse = i.material.Diffuse() * (float)(fmax(0, i.normal.Dot(light)));
+    Vector specular = i.material.Specular() * (float)pow(fmax(0, view.Dot(reflect)), i.material.Exponent());
 
     return intensity * (diffuse + specular);
 }
 
 bool PointLight::Intersect(const Intersection& inter, const Scene& s) const {
-    for (int i = 0; i < s.surfaces.size(); i++) {
-        Vector p = inter.point + inter.normal * 0.0001f;
-        Vector dir = (this->Position() - inter.point).Normalize();
-        Ray r = Ray(p, dir);
+    Vector p = inter.point + inter.normal * 0.0001f;
+    Vector dir = (position - inter.point).Normalize();
+    Ray r = Ray(p, dir);
+    float dist = (position - inter.point).Length();
 
-        if (s.surfaces[i]->Shadow(r)) {
+    for (int i = 0; i < s.surfaces.size(); i++) {
+        if (s.surfaces[i]->Shadow(r, dist)) {
             return true;
         }
     }
