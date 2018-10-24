@@ -182,13 +182,13 @@ static Scene Parse(Scene& scene, std::string fileName) {
 
             sscanf(line, "material %f %f %f %f %f %f %f %f %f %f %f %f %f %f\n",
                 &ar, &ag, &ab, &dr, &dg, &db, &sr, &sg, &sb, &ns, &tr, &tg, &tb, &ior);
-            fprintf(stderr,
-                "Material:\n"
-                "  Ambient coefficients: %f, %f, %f\n"
-                "  Diffuse coefficients: %f, %f, %f\n"
-                "  Specular coefficients: %f, %f, %f, %f\n"
-                "  Transmissive coefficients: %f, %f, %f, %f\n",
-                ar, ab, ag, dr, dg, db, sr, sg, sb, ns, tr, tg, tb, ior);
+            //fprintf(stderr,
+            //    "Material:\n"
+            //    "  Ambient coefficients: %f, %f, %f\n"
+            //    "  Diffuse coefficients: %f, %f, %f\n"
+            //    "  Specular coefficients: %f, %f, %f, %f\n"
+            //    "  Transmissive coefficients: %f, %f, %f, %f\n",
+            //    ar, ab, ag, dr, dg, db, sr, sg, sb, ns, tr, tg, tb, ior);
 
             currMaterial = Material(Vector(ar, ag, ab), Vector(dr, dg, db), Vector(sr, sg, sb), ns, Vector(tr, tg, tb), ior);
             scene.materials.push_back(currMaterial);
