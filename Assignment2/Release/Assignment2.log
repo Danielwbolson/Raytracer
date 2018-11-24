@@ -1,12 +1,59 @@
-﻿  main.cpp
+﻿  AmbientLight.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+  Camera.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\camera.cpp(12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\camera.cpp(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  DirectionalLight.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\directionallight.cpp(33): warning C4018: '<': signed/unsigned mismatch
+  Material.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+  NormalTriangle.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\normaltriangle.cpp(38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\normaltriangle.cpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\normaltriangle.cpp(81): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  PointLight.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\pointlight.cpp(25): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\pointlight.cpp(38): warning C4018: '<': signed/unsigned mismatch
+  Ray.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+  Sphere.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(69): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\sphere.cpp(71): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  SpotLight.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\spotlight.cpp(21): warning C4018: '<': signed/unsigned mismatch
+  Triangle.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\triangle.cpp(36): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\triangle.cpp(25): warning C4101: 'gamma': unreferenced local variable
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\triangle.cpp(77): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Vector.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\vector.cpp(98): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\vector.cpp(102): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\vector.cpp(105): warning C4305: '*=': truncation from 'double' to 'float'
+  image.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+  main.cpp
 c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
 d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(105): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(143): warning C4018: '<': signed/unsigned mismatch
 d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(147): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(177): warning C4018: '<': signed/unsigned mismatch
 d:\daniel olson\desktop\fall2018\csci5607\assignment2\assignment2\main.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  pixel.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
   Generating code
-  0 of 606 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  464 of 608 functions (76.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
