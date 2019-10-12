@@ -36,108 +36,108 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectionalLight.cpp">
-      <Filter>Source Files\Lights</Filter>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PointLight.cpp">
-      <Filter>Source Files\Lights</Filter>
+    <ClCompile Include="src\Ray.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SpotLight.cpp">
-      <Filter>Source Files\Lights</Filter>
+    <ClCompile Include="src\Vector.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AmbientLight.cpp">
-      <Filter>Source Files\Lights</Filter>
-    </ClCompile>
-    <ClCompile Include="Sphere.cpp">
-      <Filter>Source Files\Surfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="pixel.cpp">
+    <ClCompile Include="src\image.cpp">
       <Filter>Source Files\Image</Filter>
     </ClCompile>
-    <ClCompile Include="image.cpp">
+    <ClCompile Include="src\pixel.cpp">
       <Filter>Source Files\Image</Filter>
     </ClCompile>
-    <ClCompile Include="Material.cpp">
+    <ClCompile Include="src\AmbientLight.cpp">
+      <Filter>Source Files\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DirectionalLight.cpp">
+      <Filter>Source Files\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PointLight.cpp">
+      <Filter>Source Files\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Material.cpp">
       <Filter>Source Files\Surfaces</Filter>
     </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
+    <ClCompile Include="src\NormalTriangle.cpp">
       <Filter>Source Files\Surfaces</Filter>
     </ClCompile>
-    <ClCompile Include="NormalTriangle.cpp">
+    <ClCompile Include="src\SpotLight.cpp">
+      <Filter>Source Files\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Triangle.cpp">
+      <Filter>Source Files\Surfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sphere.cpp">
       <Filter>Source Files\Surfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Parse.h">
+    <ClInclude Include="src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DirectionalLight.h">
-      <Filter>Header Files\Lights</Filter>
+    <ClInclude Include="src\Parse.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Light.h">
-      <Filter>Header Files\Lights</Filter>
+    <ClInclude Include="src\Scene.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PointLight.h">
-      <Filter>Header Files\Lights</Filter>
+    <ClInclude Include="src\Vector.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SpotLight.h">
-      <Filter>Header Files\Lights</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
-      <Filter>Header Files\Surfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Surface.h">
-      <Filter>Header Files\Surfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="pixel.h">
+    <ClInclude Include="src\image.h">
       <Filter>Header Files\Image</Filter>
     </ClInclude>
-    <ClInclude Include="image.h">
+    <ClInclude Include="src\pixel.h">
       <Filter>Header Files\Image</Filter>
     </ClInclude>
-    <ClInclude Include="AmbientLight.h">
+    <ClInclude Include="src\stb_image.h">
+      <Filter>Header Files\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image_write.h">
+      <Filter>Header Files\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AmbientLight.h">
       <Filter>Header Files\Lights</Filter>
     </ClInclude>
-    <ClInclude Include="stb_image.h">
-      <Filter>Header Files\Image</Filter>
+    <ClInclude Include="src\DirectionalLight.h">
+      <Filter>Header Files\Lights</Filter>
     </ClInclude>
-    <ClInclude Include="stb_image_write.h">
-      <Filter>Header Files\Image</Filter>
+    <ClInclude Include="src\Light.h">
+      <Filter>Header Files\Lights</Filter>
     </ClInclude>
-    <ClInclude Include="Intersection.h">
+    <ClInclude Include="src\PointLight.h">
+      <Filter>Header Files\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SpotLight.h">
+      <Filter>Header Files\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Intersection.h">
       <Filter>Header Files\Ray</Filter>
     </ClInclude>
-    <ClInclude Include="Material.h">
-      <Filter>Header Files\Surfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Ray.h">
+    <ClInclude Include="src\Ray.h">
       <Filter>Header Files\Ray</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
+    <ClInclude Include="src\Material.h">
       <Filter>Header Files\Surfaces</Filter>
     </ClInclude>
-    <ClInclude Include="NormalTriangle.h">
+    <ClInclude Include="src\NormalTriangle.h">
+      <Filter>Header Files\Surfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sphere.h">
+      <Filter>Header Files\Surfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Surface.h">
+      <Filter>Header Files\Surfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Triangle.h">
       <Filter>Header Files\Surfaces</Filter>
     </ClInclude>
   </ItemGroup>

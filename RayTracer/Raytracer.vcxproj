@@ -24,6 +24,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Assignment2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>Raytracer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -159,42 +160,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AmbientLight.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="DirectionalLight.cpp" />
-    <ClCompile Include="image.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Material.cpp" />
-    <ClCompile Include="NormalTriangle.cpp" />
-    <ClCompile Include="pixel.cpp" />
-    <ClCompile Include="PointLight.cpp" />
-    <ClCompile Include="Ray.cpp" />
-    <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="SpotLight.cpp" />
-    <ClCompile Include="Triangle.cpp" />
-    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="src\AmbientLight.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\DirectionalLight.cpp" />
+    <ClCompile Include="src\image.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Material.cpp" />
+    <ClCompile Include="src\NormalTriangle.cpp" />
+    <ClCompile Include="src\pixel.cpp" />
+    <ClCompile Include="src\PointLight.cpp" />
+    <ClCompile Include="src\Ray.cpp" />
+    <ClCompile Include="src\Sphere.cpp" />
+    <ClCompile Include="src\SpotLight.cpp" />
+    <ClCompile Include="src\Triangle.cpp" />
+    <ClCompile Include="src\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AmbientLight.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="DirectionalLight.h" />
-    <ClInclude Include="image.h" />
-    <ClInclude Include="Intersection.h" />
-    <ClInclude Include="Light.h" />
-    <ClInclude Include="Material.h" />
-    <ClInclude Include="NormalTriangle.h" />
-    <ClInclude Include="Parse.h" />
-    <ClInclude Include="pixel.h" />
-    <ClInclude Include="PointLight.h" />
-    <ClInclude Include="Ray.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="Sphere.h" />
-    <ClInclude Include="SpotLight.h" />
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="stb_image_write.h" />
-    <ClInclude Include="Surface.h" />
-    <ClInclude Include="Triangle.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="src\AmbientLight.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\DirectionalLight.h" />
+    <ClInclude Include="src\image.h" />
+    <ClInclude Include="src\Intersection.h" />
+    <ClInclude Include="src\Light.h" />
+    <ClInclude Include="src\Material.h" />
+    <ClInclude Include="src\NormalTriangle.h" />
+    <ClInclude Include="src\Parse.h" />
+    <ClInclude Include="src\pixel.h" />
+    <ClInclude Include="src\PointLight.h" />
+    <ClInclude Include="src\Ray.h" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\Sphere.h" />
+    <ClInclude Include="src\SpotLight.h" />
+    <ClInclude Include="src\stb_image.h" />
+    <ClInclude Include="src\stb_image_write.h" />
+    <ClInclude Include="src\Surface.h" />
+    <ClInclude Include="src\Triangle.h" />
+    <ClInclude Include="src\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
